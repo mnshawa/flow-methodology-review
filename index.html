@@ -840,35 +840,36 @@ body, .reveal-viewport { background: var(--bg) !important; }
 <section data-nav="الأدوار" data-section="الأدوار">
   <div class="s-frame">
     <div class="s-topbar"><div></div><div><span class="s-tag">الأدوار</span></div></div>
-    <h2 class="anim" style="font-size:1.4em;">4 أدوار في FLOW</h2>
-    <div style="margin-top:16px;display:flex;flex-direction:column;gap:10px;" class="anim anim-d1">
-      <div style="display:flex;gap:10px;">
-        <div class="card" style="flex:1;padding:16px 18px;">
-          <h4 style="font-size:0.82em;color:var(--purple);">مدير المنتج / المشروع</h4>
-          <p style="font-size:0.66em;"><strong style="color:var(--text);">Discovery:</strong> يملك الرهان — يكتب الفرضيات، يصمم التجارب، يقيّم الأدلة</p>
-          <p style="font-size:0.66em;margin-top:4px;"><strong style="color:var(--text);">Outcome:</strong> يحدد النطاق، مقياس النجاح، ويتخذ قرار G3</p>
-        </div>
-        <div class="card" style="flex:1;padding:16px 18px;">
-          <h4 style="font-size:0.82em;color:var(--green);">المهندس / المطور</h4>
-          <p style="font-size:0.66em;"><strong style="color:var(--text);">Discovery:</strong> دراسة جدوى فنية وتقييم المخاطر التقنية</p>
-          <p style="font-size:0.66em;margin-top:4px;"><strong style="color:var(--text);">Outcome:</strong> التحليل التقني، البناء، الاختبار، التسليم</p>
-        </div>
+    <h2 class="anim" style="font-size:1.4em;">أدوار الفريق في FLOW</h2>
+    <div style="margin-top:12px;display:flex;flex-direction:column;gap:7px;flex:1;" class="anim anim-d1">
+      <div class="rule-item" style="padding:10px 16px;border-right-color:var(--purple);">
+        <div class="rule-num" style="background:var(--purple);font-size:0.5em;min-width:32px;height:32px;">&#9881;</div>
+        <div><p style="font-size:0.72em;"><strong>مدير المشروع</strong> — ينسق الدورة، يتابع الجدول، يحل العوائق، يدير الـ Pulse و Resolve.</p></div>
       </div>
-      <div style="display:flex;gap:10px;">
-        <div class="card" style="flex:1;padding:16px 18px;">
-          <h4 style="font-size:0.82em;color:var(--amber);">المصمم</h4>
-          <p style="font-size:0.66em;"><strong style="color:var(--text);">Discovery:</strong> يبني أرخص تجربة ممكنة — نماذج أولية واختبارات استخدام</p>
-          <p style="font-size:0.66em;margin-top:4px;"><strong style="color:var(--text);">Outcome:</strong> يسلّم التصاميم قبل المطورين بيومين-ثلاثة</p>
-        </div>
-        <div class="card accent-blue" style="flex:1;padding:16px 18px;">
-          <h4 style="font-size:0.82em;color:var(--blue);">الكوتش (Flow Coach)</h4>
-          <p style="font-size:0.66em;">يدير البوابات الثلاث، يضمن احترام WIP، يكشف الأنماط الخاطئة.</p>
-          <p style="font-size:0.66em;margin-top:4px;"><strong style="color:var(--text);">نفس الدور في الوضعين</strong> — حارس العملية.</p>
-        </div>
+      <div class="rule-item" style="padding:10px 16px;border-right-color:var(--purple);">
+        <div class="rule-num" style="background:var(--purple);font-size:0.5em;min-width:32px;height:32px;">&#9733;</div>
+        <div><p style="font-size:0.72em;"><strong>مدير المنتج</strong> — يملك الرهان. في Discovery: يكتب الفرضيات ويقيّم الأدلة. في Outcome: يحدد النطاق ومقياس النجاح.</p></div>
       </div>
-    </div>
-    <div style="margin-top:12px;padding:10px 16px;background:var(--text-05);border-radius:8px;" class="anim anim-d2">
-      <p style="font-size:0.7em;color:var(--text-50);margin:0;text-align:center;"><strong style="color:var(--text);">Discovery:</strong> فريق صغير (2-3 أشخاص) &nbsp;|&nbsp; <strong style="color:var(--text);">Outcome:</strong> الفريق كامل — كل مطور يملك مسار (API, iOS, Android)</p>
+      <div class="rule-item" style="padding:10px 16px;border-right-color:var(--amber);">
+        <div class="rule-num" style="background:var(--amber);color:#000;font-size:0.5em;min-width:32px;height:32px;">&#9998;</div>
+        <div><p style="font-size:0.72em;"><strong>مصمم المنتج UI/UX</strong> — في Discovery: يبني النماذج الأولية ويختبرها مع المستخدمين. في Outcome: يسلّم التصاميم قبل المطورين.</p></div>
+      </div>
+      <div class="rule-item" style="padding:10px 16px;">
+        <div class="rule-num" style="font-size:0.5em;min-width:32px;height:32px;">&#128295;</div>
+        <div><p style="font-size:0.72em;"><strong>المدير التقني</strong> — في Discovery: يقيّم الجدوى التقنية. في Outcome: يوزع الشغل ويراجع الجودة التقنية.</p></div>
+      </div>
+      <div class="rule-item" style="padding:10px 16px;border-right-color:var(--green);">
+        <div class="rule-num" style="background:var(--green);font-size:0.5em;min-width:32px;height:32px;">&#128187;</div>
+        <div><p style="font-size:0.72em;"><strong>الفريق التقني</strong> — في Discovery: دراسة جدوى فنية سريعة. في Outcome: التحليل التقني، البناء، الاختبار، التوثيق.</p></div>
+      </div>
+      <div class="rule-item" style="padding:10px 16px;border-right-color:var(--amber);">
+        <div class="rule-num" style="background:var(--amber);color:#000;font-size:0.5em;min-width:32px;height:32px;">&#128270;</div>
+        <div><p style="font-size:0.72em;"><strong>فريق الجودة</strong> — في Outcome: يختبر الفيتشرات ويتحقق من الجودة قبل التسليم. في Discovery: دور محدود.</p></div>
+      </div>
+      <div class="rule-item" style="padding:10px 16px;border-right-color:var(--blue);">
+        <div class="rule-num" style="background:var(--blue);font-size:0.5em;min-width:32px;height:32px;">&#9878;</div>
+        <div><p style="font-size:0.72em;"><strong>الكوتش (Flow Coach)</strong> — يدير البوابات الثلاث، يضمن احترام WIP، يكشف الأنماط الخاطئة. نفس الدور في الوضعين.</p></div>
+      </div>
     </div>
     <div class="s-footer"><span>FLOW Methodology</span><div class="s-footer-line"></div><span>10</span></div>
   </div>
