@@ -524,18 +524,16 @@ body, .reveal-viewport { background: var(--bg) !important; }
             <div style="text-align:center;margin-bottom:4px;">
               <span style="font-size:0.9em;font-weight:800;color:var(--teal);">Outcome</span>
             </div>
-            <div style="display:flex;align-items:center;justify-content:center;gap:6px;">
-              <span style="background:rgba(240,165,0,0.15);padding:5px 10px;border-radius:4px;font-size:0.62em;color:var(--amber);font-weight:800;">G1</span>
+            <div style="display:flex;align-items:center;justify-content:center;gap:8px;">
+              <span style="background:rgba(240,165,0,0.15);padding:5px 12px;border-radius:4px;font-size:0.62em;color:var(--amber);font-weight:800;">G1 Commit</span>
               <span style="color:var(--text-20);">&#8594;</span>
-              <span style="background:rgba(240,165,0,0.15);padding:5px 10px;border-radius:4px;font-size:0.62em;color:var(--amber);font-weight:800;">G2</span>
+              <span style="background:rgba(240,165,0,0.15);padding:5px 12px;border-radius:4px;font-size:0.62em;color:var(--amber);font-weight:800;">G2 Pulse</span>
               <span style="color:var(--text-20);">&#8594;</span>
-              <span style="background:rgba(240,165,0,0.15);padding:5px 10px;border-radius:4px;font-size:0.62em;color:var(--amber);font-weight:800;">G3</span>
-              <span style="color:var(--text-20);">&#8594;</span>
-              <span style="background:rgba(240,165,0,0.15);padding:5px 10px;border-radius:4px;font-size:0.62em;color:var(--amber);font-weight:800;">G4</span>
+              <span style="background:rgba(240,165,0,0.15);padding:5px 12px;border-radius:4px;font-size:0.62em;color:var(--amber);font-weight:800;">G3 Resolve</span>
               <span style="color:var(--text-20);">&#8594;</span>
               <span style="background:rgba(46,204,113,0.15);padding:5px 12px;border-radius:4px;font-size:0.62em;color:var(--green);font-weight:800;">Done</span>
             </div>
-            <div style="text-align:center;font-size:0.6em;color:var(--text-35);margin-top:4px;">اختبار ← جودة ← توثيق ← مراجعة ← تسليم</div>
+            <div style="text-align:center;font-size:0.6em;color:var(--text-35);margin-top:4px;">التزام ← فحص نص الدورة ← مراجعة نهائية ← تسليم</div>
           </div>
         </div>
       </div>
@@ -600,7 +598,7 @@ body, .reveal-viewport { background: var(--bg) !important; }
         <ul>
           <li>مواصفات واضحة</li>
           <li>فيتشرات محددة</li>
-          <li>بوابات جودة (Gates)</li>
+          <li>3 بوابات (Commit, Pulse, Resolve)</li>
           <li>النتيجة: <strong style="color:var(--teal);">Features Done</strong></li>
         </ul>
       </div>
@@ -673,12 +671,12 @@ body, .reveal-viewport { background: var(--bg) !important; }
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
           <div class="card accent-amber" style="padding:16px 18px;">
-            <h4 style="font-size:0.8em;color:var(--amber);">Pulse Check</h4>
-            <p style="font-size:0.68em;">نص الدورة — مراجعة سريعة: وين وصلنا؟ في عوائق؟ نحتاج نعدّل المسار؟</p>
+            <h4 style="font-size:0.8em;color:var(--amber);">G2 — Pulse</h4>
+            <p style="font-size:0.68em;">نص الدورة — فحص سريع: وين وصلنا؟ في عوائق؟ نحتاج نعدّل المسار؟</p>
           </div>
           <div class="card accent-green" style="padding:16px 18px;">
-            <h4 style="font-size:0.8em;color:var(--green);">Gate Review</h4>
-            <p style="font-size:0.68em;">آخر الدورة — مراجعة شاملة: إيش خلص؟ إيش ينتقل؟ إيش يُلغى؟</p>
+            <h4 style="font-size:0.8em;color:var(--green);">G3 — Resolve</h4>
+            <p style="font-size:0.68em;">آخر الدورة — مراجعة النتائج وقرار: تسليم أو تعديل أو إيقاف.</p>
           </div>
         </div>
       </div>
@@ -688,99 +686,88 @@ body, .reveal-viewport { background: var(--bg) !important; }
   </div>
 </section>
 
-<!-- SLIDE 6: FEATURE PIPELINE -->
-<section data-nav="خط سير الفيتشر" data-section="التنفيذ">
+<!-- SLIDE 6: CYCLE FLOW WITH 3 GATES -->
+<section data-nav="الدورة والبوابات" data-section="التنفيذ">
   <div class="s-frame">
-    <div class="s-topbar"><div></div><div><span class="s-tag">خط سير الفيتشر</span></div></div>
-    <h2 class="anim" style="font-size:1.4em;">رحلة الفيتشر — 10 مراحل أساسية + 4 بوابات</h2>
-    <div class="pipeline anim anim-d1" style="flex:1;justify-content:center;">
-      <div class="pipe-row">
-        <div class="pipe-step" style="flex:2;">backlog</div>
-        <div class="pipe-step" style="flex:2;">todo</div>
-        <div class="pipe-step active" style="flex:3;">in-progress</div>
+    <div class="s-topbar"><div></div><div><span class="s-tag">دورة العمل</span></div></div>
+    <h2 class="anim" style="font-size:1.4em;">الدورة الواحدة — 3 بوابات</h2>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;" class="anim anim-d1">
+      <!-- G1 Commit -->
+      <div style="width:100%;max-width:700px;background:rgba(240,165,0,0.1);border:1px solid rgba(240,165,0,0.2);border-radius:12px;padding:16px 24px;display:flex;align-items:center;gap:16px;">
+        <span style="background:var(--amber);color:#000;padding:6px 14px;border-radius:8px;font-weight:900;font-size:0.85em;flex-shrink:0;">G1</span>
+        <div>
+          <span style="font-size:0.88em;font-weight:800;color:var(--text);">Commit — الالتزام</span>
+          <p style="font-size:0.7em;color:var(--text-50);margin:4px 0 0;">بداية الدورة: الفريق يختار الشغل ويلتزم بتسليمه خلال الدورة.</p>
+        </div>
       </div>
-      <div style="text-align:center;padding:3px 0;">
-        <span style="background:var(--amber);color:#000;padding:3px 16px;border-radius:6px;font-size:0.68em;font-weight:800;">G1 — بوابة الاختبار</span>
+      <!-- Work phase -->
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span style="color:var(--text-20);font-size:1em;">&#8595;</span>
+        <span style="font-size:0.72em;color:var(--text-35);">الفريق يشتغل...</span>
       </div>
-      <div class="pipe-row">
-        <div class="pipe-step" style="flex:3;">ready-for-testing</div>
-        <div class="pipe-step active" style="flex:3;">in-testing</div>
+      <!-- G2 Pulse -->
+      <div style="width:100%;max-width:700px;background:rgba(240,165,0,0.1);border:1px solid rgba(240,165,0,0.2);border-radius:12px;padding:16px 24px;display:flex;align-items:center;gap:16px;">
+        <span style="background:var(--amber);color:#000;padding:6px 14px;border-radius:8px;font-weight:900;font-size:0.85em;flex-shrink:0;">G2</span>
+        <div>
+          <span style="font-size:0.88em;font-weight:800;color:var(--text);">Pulse — فحص النبض</span>
+          <p style="font-size:0.7em;color:var(--text-50);margin:4px 0 0;">نص الدورة: هل نحن على المسار الصحيح؟ في عوائق؟ نحتاج نعدّل؟</p>
+        </div>
       </div>
-      <div style="text-align:center;padding:3px 0;">
-        <span style="background:var(--amber);color:#000;padding:3px 16px;border-radius:6px;font-size:0.68em;font-weight:800;">G2 — بوابة الجودة</span>
+      <!-- Work phase -->
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span style="color:var(--text-20);font-size:1em;">&#8595;</span>
+        <span style="font-size:0.72em;color:var(--text-35);">الفريق يكمل...</span>
       </div>
-      <div class="pipe-row">
-        <div class="pipe-step" style="flex:3;">ready-for-docs</div>
-        <div class="pipe-step active" style="flex:3;">in-docs</div>
+      <!-- G3 Resolve -->
+      <div style="width:100%;max-width:700px;background:rgba(240,165,0,0.1);border:1px solid rgba(240,165,0,0.2);border-radius:12px;padding:16px 24px;display:flex;align-items:center;gap:16px;">
+        <span style="background:var(--amber);color:#000;padding:6px 14px;border-radius:8px;font-weight:900;font-size:0.85em;flex-shrink:0;">G3</span>
+        <div>
+          <span style="font-size:0.88em;font-weight:800;color:var(--text);">Resolve — المراجعة والقرار</span>
+          <p style="font-size:0.7em;color:var(--text-50);margin:4px 0 0;">نهاية الدورة: إيش خلص؟ إيش يُكمل؟ إيش يتوقف؟ قرارات واضحة.</p>
+        </div>
       </div>
-      <div style="text-align:center;padding:3px 0;">
-        <span style="background:var(--amber);color:#000;padding:3px 16px;border-radius:6px;font-size:0.68em;font-weight:800;">G3 — بوابة التوثيق</span>
+      <!-- Result -->
+      <div style="display:flex;gap:12px;justify-content:center;">
+        <span style="background:rgba(46,204,113,0.12);padding:8px 20px;border-radius:8px;font-size:0.75em;color:var(--green);font-weight:700;">تسليم</span>
+        <span style="background:rgba(240,165,0,0.12);padding:8px 20px;border-radius:8px;font-size:0.75em;color:var(--amber);font-weight:700;">تعديل</span>
+        <span style="background:rgba(231,76,60,0.12);padding:8px 20px;border-radius:8px;font-size:0.75em;color:var(--red);font-weight:700;">إيقاف</span>
       </div>
-      <div class="pipe-row">
-        <div class="pipe-step" style="flex:3;">documented</div>
-        <div class="pipe-step active" style="flex:3;">in-review</div>
-      </div>
-      <div style="text-align:center;padding:3px 0;">
-        <span style="background:var(--amber);color:#000;padding:3px 16px;border-radius:6px;font-size:0.68em;font-weight:800;">G4 — بوابة التسليم</span>
-      </div>
-      <div class="pipe-row">
-        <div class="pipe-step done" style="font-weight:800;">done</div>
-      </div>
-    </div>
-    <div style="margin-top:8px;padding:8px 16px;background:var(--text-05);border-radius:8px;" class="anim anim-d2">
-      <p style="font-size:0.68em;color:var(--text-50);margin:0;text-align:center;">+ 3 حالات خاصة: <span style="color:var(--red);">blocked</span> (متوقف) &bull; <span style="color:var(--amber);">rejected</span> (مرفوض) &bull; <span style="color:var(--text-35);">cancelled</span> (ملغي)</p>
     </div>
     <div class="s-footer"><span>FLOW Methodology</span><div class="s-footer-line"></div><span>6</span></div>
   </div>
 </section>
 
-<!-- SLIDE 7: ALL GATES -->
-<section data-nav="البوابات الأربع" data-section="التنفيذ">
+<!-- SLIDE 7: 3 GATES DETAIL -->
+<section data-nav="البوابات الثلاث" data-section="التنفيذ">
   <div class="s-frame">
     <div class="s-topbar"><div></div><div><span class="s-tag">Gates</span></div></div>
-    <h2 class="anim" style="font-size:1.4em;">البوابات الأربع — الدليل + المسؤول</h2>
-    <div class="card-grid g2 anim anim-d1" style="margin-top:16px;flex:1;">
-      <div class="gate-card">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-          <div class="gate-num">G1</div>
-          <span class="stat-pill sp-teal" style="font-size:0.6em;padding:4px 10px;">الفريق التقني</span>
+    <h2 class="anim" style="font-size:1.4em;">البوابات الثلاث بالتفصيل</h2>
+    <div style="margin-top:20px;display:flex;flex-direction:column;gap:14px;flex:1;" class="anim anim-d1">
+      <div class="gate-card" style="border-top-color:var(--teal);padding:20px 24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+          <div class="gate-num" style="background:var(--teal);">G1</div>
+          <span style="font-size:1em;font-weight:800;color:var(--text);">Commit — الالتزام</span>
         </div>
-        <h4>بوابة الاختبار</h4>
-        <p>in-progress &#8594; ready-for-testing</p>
-        <div class="gate-evidence">الاختبارات ناجحة</div>
+        <p style="font-size:0.78em;">الفريق يراجع الشغل المتاح ويختار إيش يدخل الدورة. يلتزم بتسليمه خلال المدة المحددة. ما يدخل الدورة ما يتغير.</p>
       </div>
-      <div class="gate-card">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+      <div class="gate-card" style="padding:20px 24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
           <div class="gate-num">G2</div>
-          <span class="stat-pill sp-green" style="font-size:0.6em;padding:4px 10px;">فريق الجودة</span>
+          <span style="font-size:1em;font-weight:800;color:var(--text);">Pulse — فحص النبض</span>
         </div>
-        <h4>بوابة الجودة</h4>
-        <p>in-testing &#8594; ready-for-docs</p>
-        <div class="gate-evidence">التغطية كافية + ما في مشاكل</div>
+        <p style="font-size:0.78em;">نص الدورة: مراجعة سريعة — هل الشغل ماشي؟ في عوائق؟ نحتاج مساعدة أو تعديل على المسار؟</p>
       </div>
-      <div class="gate-card">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-          <div class="gate-num">G3</div>
-          <span class="stat-pill sp-teal" style="font-size:0.6em;padding:4px 10px;">الفريق التقني</span>
+      <div class="gate-card" style="border-top-color:var(--green);padding:20px 24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+          <div class="gate-num" style="background:var(--green);">G3</div>
+          <span style="font-size:1em;font-weight:800;color:var(--text);">Resolve — المراجعة والقرار</span>
         </div>
-        <h4>بوابة التوثيق</h4>
-        <p>in-docs &#8594; documented</p>
-        <div class="gate-evidence">التوثيق مكتمل ومحدّث</div>
-      </div>
-      <div class="gate-card">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-          <div class="gate-num">G4</div>
-          <span class="stat-pill sp-amber" style="font-size:0.6em;padding:4px 10px;">المدير التقني</span>
-        </div>
-        <h4>بوابة التسليم</h4>
-        <p>in-review &#8594; done</p>
-        <div class="gate-evidence">مراجعة الكود + موافقة نهائية</div>
+        <p style="font-size:0.78em;">نهاية الدورة: مراجعة النتائج واتخاذ قرار واضح لكل شغلة — <strong style="color:var(--green);">تسليم</strong> أو <strong style="color:var(--amber);">تعديل وإعادة</strong> أو <strong style="color:var(--red);">إيقاف</strong>.</p>
       </div>
     </div>
     <div style="margin-top:12px;padding:10px 16px;background:rgba(231,76,60,0.1);border:1px solid rgba(231,76,60,0.2);border-radius:8px;" class="anim anim-d2">
-      <p style="font-size:0.75em;color:var(--red);margin:0;text-align:center;font-weight:700;">ممنوع القفز فوق البوابات — كل بوابة لازم تعديها بدليل</p>
+      <p style="font-size:0.75em;color:var(--red);margin:0;text-align:center;font-weight:700;">ما في بوابة يتم تخطيها — كل بوابة لها وقتها ولازم تصير</p>
     </div>
-
     <div class="s-footer"><span>FLOW Methodology</span><div class="s-footer-line"></div><span>7</span></div>
   </div>
 </section>
@@ -854,15 +841,15 @@ body, .reveal-viewport { background: var(--bg) !important; }
       </div>
       <div class="rule-item">
         <div class="rule-num" style="font-size:0.55em;min-width:36px;">&#128295;</div>
-        <p><strong>المدير التقني</strong> — يوزع الفيتشرات على المطورين. مسؤول عن البوابة 4 (المراجعة النهائية).</p>
+        <p><strong>المدير التقني</strong> — يوزع الفيتشرات على المطورين ويراجع جودة الشغل قبل التسليم.</p>
       </div>
       <div class="rule-item" style="border-right-color:var(--green);">
         <div class="rule-num" style="background:var(--green);font-size:0.55em;min-width:36px;">&#128187;</div>
-        <p><strong>الفريق التقني</strong> — المحرك الأساسي. يبنوا الفيتشرات. مسؤولين عن البوابة 1 (الاختبار) والبوابة 3 (التوثيق).</p>
+        <p><strong>الفريق التقني</strong> — المحرك الأساسي. يبنوا الفيتشرات ويختبروها ويوثقوها.</p>
       </div>
       <div class="rule-item" style="border-right-color:var(--amber);">
         <div class="rule-num" style="background:var(--amber);color:#000;font-size:0.55em;min-width:36px;">&#128270;</div>
-        <p><strong>فريق الجودة</strong> — يختبروا كل فيتشر. مسؤولين عن البوابة 2 (موافقة الجودة).</p>
+        <p><strong>فريق الجودة</strong> — يختبروا كل فيتشر ويتأكدوا من الجودة قبل التسليم.</p>
       </div>
       <div class="rule-item" style="border-right-color:var(--text-20);opacity:0.6;">
         <div class="rule-num" style="background:var(--text-35);font-size:0.55em;min-width:36px;">&#9733;</div>
@@ -881,7 +868,7 @@ body, .reveal-viewport { background: var(--bg) !important; }
     <div style="margin-top:18px;display:flex;flex-direction:column;gap:10px;flex:1;" class="anim anim-d1">
       <div class="rule-item"><div class="rule-num">1</div><p><strong>الـ Tempo ثابت وما يتغير.</strong> الدورة تخلص بموعدها. اللي ما خلص يرجع للـ Backlog.</p></div>
       <div class="rule-item"><div class="rule-num">2</div><p><strong>احترم حد الـ WIP.</strong> ما تبدأ جديد قبل ما تخلص اللي عندك. التركيز أهم من الكمية.</p></div>
-      <div class="rule-item"><div class="rule-num">3</div><p><strong>كل بوابة لازم تعديها لحالها.</strong> ممنوع تقفز. كل بوابة تحتاج دليل حقيقي.</p></div>
+      <div class="rule-item"><div class="rule-num">3</div><p><strong>ما تتخطى أي بوابة.</strong> G1 Commit، G2 Pulse، G3 Resolve — كل وحدة لها وقتها ولازم تصير.</p></div>
       <div class="rule-item"><div class="rule-num">4</div><p><strong>حدد Kill Condition قبل ما تبدأ.</strong> كل دورة لها شرط إيقاف واضح ومتفق عليه.</p></div>
       <div class="rule-item"><div class="rule-num">5</div><p><strong>مو متأكد؟ ابدأ بـ Discovery.</strong> ما تبني شي ما تفهمه. اكتشف أول.</p></div>
       <div class="rule-item"><div class="rule-num">6</div><p><strong>كل شغلة ترجع للـ Decision Spine.</strong> ما تقدر تربطها برؤية ورهان؟ لا تشتغل عليها.</p></div>
